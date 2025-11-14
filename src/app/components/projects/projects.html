@@ -8,6 +8,8 @@
       <div class="project-card" [routerLink]="['/project', p.id]">
         <h3>{{ p.title }}</h3>
         <p>{{ p.description }}</p>
+      
+<a [routerLink]="['/project', p.id]" class="arrow-btn">→ Show More</a>
       </div>
     </div>
 

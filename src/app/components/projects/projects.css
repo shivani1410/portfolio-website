@@ -58,7 +58,7 @@ a.project-card:hover {
   height: 200px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 16px;
-  padding: 3rem;
+  padding: 2rem;
   box-sizing: border-box;
   color: #d7eaff;
   cursor: pointer;
@@ -96,3 +96,18 @@ a.project-card:hover {
     height: 180px;
   }
 }
+
+.arrow-btn {
+  /* display: inline-block; */
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.arrow-btn:hover {
+
+  text-decoration: underline;
+  transform: translateX(4px);
+}
+
+
