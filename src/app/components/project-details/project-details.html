@@ -1,0 +1,83 @@
+<!-- <div class="project-details" *ngIf="project">
+  <h1>{{ project.title }}</h1>
+  <p class="desc">{{ project.description }}</p>
+
+  <h3>Tech Stack:</h3>
+  <ul>
+    <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+  </ul>
+
+  <p class="details">{{ project.details }}</p>
+
+  <a href="/" class="back-btn">← Back to Projects</a>
+</div> -->
+<div class="project-page">
+  <aside class="sidebar">
+    <h2>Projects</h2>
+    <ul>
+      <li *ngFor="let project of projects"
+          (click)="navigateToProject(project)"
+          [class.active]="project.id === selectedProject.id">
+        {{ project.title }}
+      </li>
+    </ul>
+    <a href="/" class="back-link">← Back to Portfolio</a>
+  </aside>
+
+  <main class="details" *ngIf="selectedProject">
+    <h1>{{ selectedProject.title }}</h1>
+    <p class="desc">{{ selectedProject.description }}</p>
+
+    <h3>Tech Stack</h3>
+    <ul class="tech-stack">
+      <li *ngFor="let tech of selectedProject.techStack">{{ tech }}</li>
+    </ul>
+    <div class="project-links">
+  <a *ngIf="selectedProject.code"
+    [href]='selectedProject.code' 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="github-link"
+  >
+    <img src="assets/github-mark.svg" alt="GitHub" class="github-icon">
+    View on GitHub
+  </a>
+</div>
+
+    <h3>Demo</h3>
+  <!-- <video
+    width="80%"
+    height="auto"
+    controls
+    class="project-video"
+  > -->
+   <!-- <video 
+   width="80%"
+    height="auto"
+   class="project-video"
+   controls
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    #projectVideo
+  >
+    <source src={{selectedProject.video}} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video> -->
+  <div class="project-video">
+  <video 
+  width="80%"
+    height="auto"
+    controls
+    src={{selectedProject.video}}
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    #projectVideo
+  ></video>
+</div>
+
+  </main>
+</div>

@@ -1,0 +1,38 @@
+<div class="hero">
+  <div class="floating-lights">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="glow-text">
+      Hi, I'm <span class="highlight">Shivani Mathur</span>
+    </h1>
+    <h2 class="typewriter">
+      <span class="typed-text">AI Integration Engineer | Java Developer | AR Enthusiast</span>
+    </h2>
+    <!-- <button mat-raised-button color="accent" class="hero-btn">View My Work</button> -->
+    <button mat-raised-button color="accent" class="hero-btn" (click)="scrollToSection('projects')">
+  View My Work
+</button>
+
+  </div>
+</div>
+
+
+<section id="about" class="reveal">
+  <app-about></app-about>
+</section>
+
+<section id="skills" class="reveal">
+<app-skills></app-skills>
+</section>
+
+<section id="projects" class="reveal">
+<app-projects></app-projects>
+</section>
+
+<section id="contact" class="reveal">
+<app-contact></app-contact>
+</section>
+
+<footer>© 2025 Shivani Mathur | Built with ❤️ in Angular</footer>

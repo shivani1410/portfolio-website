@@ -1,0 +1,15 @@
+<h2 class="section-title">Projects</h2>
+
+<div class="slider">
+  <div class="slide-track">
+
+    <!-- Repeat all cards twice for infinite loop -->
+    <div class="slide" *ngFor="let p of projects.concat(projects)">
+      <div class="project-card" [routerLink]="['/project', p.id]">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
