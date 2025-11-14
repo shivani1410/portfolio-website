@@ -85,7 +85,7 @@ a.project-card:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 5)); /* move 5 original cards left */
+    transform: translateX(calc(-300px * 3)); /* move 5 original cards left */
   }
 }
 
