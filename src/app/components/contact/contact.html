@@ -2,18 +2,18 @@
   <form>
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Your Name">
+      <input matInput placeholder="Your Name" [(ngModel)]="username" name="username">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Your Email">
+      <input matInput placeholder="Your Email" [(ngModel)]="email" name="email">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Message</mat-label>
-      <textarea matInput rows="3" placeholder="Say hello..."></textarea>
+      <textarea matInput rows="3" placeholder="Say hello..." [(ngModel)]="message" name="message"></textarea>
     </mat-form-field>
 
-    <button mat-raised-button color="primary">Send Message</button>
+    <button mat-raised-button color="primary" (click)="sendEmail()">Send Message</button>
   </form>
