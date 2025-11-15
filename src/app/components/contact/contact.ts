@@ -21,7 +21,7 @@ sendEmail() {
     'template_zko3pcr',
     {
       from_name: this.username,
-      email: this.email,
+      reply_to: this.email,
       message: this.message,
     },
     'BA4SLGEc1vZGO5W9F'
